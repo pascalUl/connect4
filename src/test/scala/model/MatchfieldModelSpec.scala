@@ -13,7 +13,7 @@ class MatchfieldModelSpec extends AnyWordSpec with Matchers {
       "give access to its cells" in {}
     }
     "Created with predefined matrix" should {
-      "have the right values (PlayerModels) in the right places"
+      "have the right values (PlayerModels) in the right places" in {}
     }
   }
 }
