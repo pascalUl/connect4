@@ -2,17 +2,16 @@ package controllers
 
 import model.{MatchfieldModel, PlayerModel}
 
-class GameLogic (var x: Int, var y: Int){
+class GameLogic () {
 
     /**
       * Check if a player has 4 chips in one row, column or diagonal
       *
-      * @param player
       * @param matchfield
-      * @return
+      * @return Option with the player who has won the game or None
       *
       */
-  def checkIfPlayerWon(player: PlayerModel, matchfield : MatchfieldModel, a: Int, b: Int) : Boolean = {
+  def checkIfSomeoneWon(matchfield : MatchfieldModel) : Option[PlayerModel] = {
 
 
     def fourInColumn() : Boolean = {
@@ -39,7 +38,16 @@ class GameLogic (var x: Int, var y: Int){
       true
     }
 
-    true
+    // for now
+    None
+  }
+
+  def getInitialMatchField() = {
+    MatchfieldModel()
+  }
+
+  def setChip(column : Int, matchField : MatchfieldModel, player : PlayerModel) = {
+    MatchfieldModel()
   }
 
 }
