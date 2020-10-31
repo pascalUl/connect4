@@ -1,3 +1,7 @@
 package model
 
-class PlayerModel(name: String = "player", sign: String = "X", hasTurn: Boolean = false)
+case class PlayerModel(name: String = "player", sign: Char = 'X') {
+  override def toString: String = {
+    this.sign.toString
+  }
+}
