@@ -14,7 +14,7 @@ src_managed/
 project/boot/
 project/plugins/project/
 project/project/
-project/target/
+project/target/*
 logs/
 project/.sbtserver
 .sbtserver/
