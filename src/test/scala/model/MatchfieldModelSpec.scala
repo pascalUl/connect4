@@ -5,7 +5,7 @@ import org.scalatest.wordspec.AnyWordSpec
 
 
 class MatchfieldModelSpec extends AnyWordSpec with Matchers {
-  "A MatchfieldModelSpec" when {
+  "A MatchfieldModel" when {
     "Created without parameter" should {
       "be created with 7 columns and 6 rows" in {}
       "initially have only free cells" in {}
