@@ -42,12 +42,17 @@ class GameLogic () {
     None
   }
 
+
+  def checkIfDraw(matchField:MatchfieldModel): Boolean = {
+    false
+  }
+
   def getInitialMatchField() = {
     MatchfieldModel()
   }
 
-  def setChip(column : Int, matchField : MatchfieldModel, player : PlayerModel) = {
-    MatchfieldModel()
+  def setChip(column : Int, matchField : MatchfieldModel, player : PlayerModel):Option[MatchfieldModel] = {
+    Some(MatchfieldModel())
   }
 
 }
