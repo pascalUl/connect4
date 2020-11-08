@@ -1,4 +1,4 @@
-import controllers.GameLogic
+/*import controllers.GameLogic
 import model.{MatchfieldModel, PlayerModel}
 
 import scala.annotation.tailrec
@@ -78,3 +78,5 @@ object ConnectFour {
     }
   }
 }
+
+*/
