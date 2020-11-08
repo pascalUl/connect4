@@ -1,4 +1,4 @@
-/*package controllers
+package controllers
 
 import model.{MatchfieldModel, PlayerModel}
 import scala.annotation.tailrec
@@ -96,4 +96,3 @@ class GameLogic () {
     else row
   }
 }
-*/

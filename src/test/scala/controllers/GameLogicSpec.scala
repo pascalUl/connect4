@@ -1,4 +1,4 @@
-/*package controllers
+package controllers
 
 import model.{MatchfieldModel, PlayerModel}
 import org.scalatest.wordspec.AnyWordSpec
@@ -67,4 +67,3 @@ class GameLogicSpec extends AnyWordSpec with Matchers {
   //  "check whether the game continues" in {}
   }
 }
-*/
