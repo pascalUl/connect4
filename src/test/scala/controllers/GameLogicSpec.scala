@@ -54,7 +54,13 @@ class GameLogicSpec extends AnyWordSpec with Matchers {
       gameLogic.countDiagonal(6,0,0,"",0,0, move10.rows.map(_.map(_.name))) should be (4)
     }
 
-    "return true if player won with 4 tokens diagonal" in {}
+    "return true if player won with 4 tokens diagonal" in {
+      val move1 = gameLogic.setChip(0, initialField, player).get
+      val move2 = gameLogic.setChip(1, move1, player).get
+      val move3 = gameLogic.setChip(1, move2, player).get
+      val move4 = gameLogic.setChip(2, move3, player).get
+      gameLogic.checkIfSomeoneWon(initialField, player)
+    }
     "return true if player won with 4 tokens horizontal" in {}
     "return true if player won with 4 tokens vertical" in {}
 
