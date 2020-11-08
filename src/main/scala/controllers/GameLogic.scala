@@ -17,7 +17,8 @@ class GameLogic () {
 
     def fourInColumn() : Boolean = {
       val resultList = list.transpose.map(x =>isSuccessively(x.toList,3)).filter(_ == true)
-      if(resultList contains(true)) true else false
+      if(resultList contains(true)) true
+      else false
     }
 
     def fourInRow() : Boolean = {
@@ -32,7 +33,8 @@ class GameLogic () {
       val v4 = countDiagonal(6,1,0,"noPlayer", 0, 0, rows)
       val v5 = countDiagonal(5,2,0,"noPlayer", 0, 0, rows)
       val v6 = countDiagonal(4,3,0,"noPlayer", 0, 0, rows)
-      if(v1>=3 || v2>=3 || v3>=3 || v4>=3 || v5>=3 || v6>=3) true else false
+      if(v1>=3 || v2>=3 || v3>=3 || v4>=3 || v5>=3 || v6>=3) true
+      else false
     }
 
     if(fourInColumn() || fourInRow() || fourDiagonalFromXTop()) return Some(true) else Some(false)
