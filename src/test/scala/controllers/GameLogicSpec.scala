@@ -83,7 +83,7 @@ class GameLogicSpec extends AnyWordSpec with Matchers {
       gameLogic.checkIfSomeoneWon(move4, player) should be (Some(true))
     }
 
-    "return true if 4 tokens are vertical from position 0|0 -> 3|3"  in {
+    "return true if 4 tokens are vertical from position 0|0 -> 3|3 "  in {
         val move1 = gameLogic.setChip(0, initialField, player).get
         val move2 = gameLogic.setChip(1, move1, player).get
         val move3 = gameLogic.setChip(1, move2, player).get
