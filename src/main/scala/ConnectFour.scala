@@ -1,4 +1,4 @@
-/*import controllers.GameLogic
+import controllers.GameLogic
 import model.{MatchfieldModel, PlayerModel}
 
 import scala.annotation.tailrec
@@ -47,18 +47,18 @@ object ConnectFour {
         play(players, playerIndex, matchField, gameLogic)
 
       case Some(matrix) =>
-        println("------- 4 GEWINNT  -------")
-        println("| " + players(0).name + " : " + players(0).sign)
-        println("| " + players(1).name + " : " + players(1).sign)
-        println("--------------------------")
-        println(matrix.rows(5))
-        println(matrix.rows(4))
-        println(matrix.rows(3))
-        println(matrix.rows(2))
-        println(matrix.rows(1))
-        println(matrix.rows(0))
-        println("---------------------------")
-        println("      |0| 1| 2| 3| 4| 5| 6|")
+        var matchfield = "------- 4 GEWINNT  -------\n" +
+          "| " + players(0).name + " : " + players(0).sign "\n" +
+          "| " + players(1).name + " : " + players(1).sign "\n" +
+          "--------------------------" "\n" +
+          matrix.rows(5) "\n" +
+          matrix.rows(4) "\n" +
+          matrix.rows(3) "\n" +
+          matrix.rows(2)"\n" +
+          matrix.rows(1)"\n" +
+          matrix.rows(0)"\n" +
+          "---------------------------\n" +
+          "      |0| 1| 2| 3| 4| 5| 6|\n"
 
         gameLogic.checkIfSomeoneWon(matrix, player) match {
           // return winner
@@ -79,4 +79,3 @@ object ConnectFour {
   }
 }
 
-*/
