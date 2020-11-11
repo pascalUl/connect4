@@ -59,7 +59,8 @@ class GameLogic () {
             } else{successivelyCount}
           }
           else {
-            val max = if (successivelyCount > maxCount) successivelyCount else maxCount
+            val max = if (successivelyCount > maxCount) successivelyCount
+            else maxCount
             numberOfSuccessivelySymbols(tail, maxCount = max) // If row of equals symbols is broken
           }
       case _ => maxCount // If list is empty or last symbol
@@ -71,9 +72,9 @@ class GameLogic () {
       if((rows(posX)(posY) contains lastState) && !(rows(posX)(posY) contains "NoPlayer"))
         return countDiagonal(maxLength,posX+1, posY+1,rows(posX)(posY),count+1, maxCount+1,rows)
       else
-        if(count > maxCount)
-          return countDiagonal(maxLength,posX+1, posY+1,rows(posX)(posY),0, count,rows)
-        else
+       // if(count > maxCount)
+        //  return countDiagonal(maxLength,posX+1, posY+1,rows(posX)(posY),0, count,rows)
+        //else
           return countDiagonal(maxLength,posX+1, posY+1,rows(posX)(posY),0, maxCount,rows)
     }
     maxCount
