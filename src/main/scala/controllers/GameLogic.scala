@@ -59,9 +59,10 @@ class GameLogic () {
             } else{successivelyCount}
           }
           else {
-            val max = if (successivelyCount > maxCount) successivelyCount
-            else maxCount
-            numberOfSuccessivelySymbols(tail, maxCount = max) // If row of equals symbols is broken
+           // val max = if (successivelyCount > maxCount) successivelyCount
+           // else maxCount
+           // numberOfSuccessivelySymbols(tail, maxCount = max) // If row of equals symbols is broken
+            numberOfSuccessivelySymbols(tail, maxCount) // If row of equals symbols is broken
           }
       case _ => maxCount // If list is empty or last symbol
     }
